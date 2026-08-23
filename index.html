@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UrbanX 3D</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Visor de modelos 3D -->
+  <script
+    type="module"
+    src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js">
+  </script>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+
+    <div class="logo">
+      URBAN<span>X</span>
+    </div>
+
+    <div class="header-text">
+      PRODUCT EXPERIENCE
+    </div>
+
+  </header>
+
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="producto-container">
+
+
+    <!-- LADO IZQUIERDO: PRODUCTO 3D -->
+    <section class="producto-3d">
+
+      <div class="badge">
+        VISTA 3D
+      </div>
+
+      <model-viewer
+  id="modelo3d"
+  src="assets/producto.glb"
+  alt="Producto UrbanX en 3D"
+  camera-controls
+  auto-rotate
+  auto-rotate-delay="0"
+  rotation-per-second="20deg"
+  interaction-prompt="auto"
+  shadow-intensity="1"
+  exposure="1"
+  environment-image="neutral">
+</model-viewer>
+
+  
+  </div>
+      <!-- CONTROLES -->
+
+      <div class="controles">
+
+        <button id="girarBtn">
+          Pausar giro
+        </button>
+
+        <button id="reiniciarBtn">
+          Restablecer vista
+        </button>
+
+      </div>
+
+
+      <p class="instruccion">
+        Arrastra el producto para girarlo · Usa zoom para acercarlo
+      </p>
+
+    </section>
+
+
+
+    <!-- LADO DERECHO: INFORMACIÓN -->
+    <section class="producto-info">
+
+
+      <p class="categoria">
+        URBANX / PRODUCTO
+      </p>
+
+
+      <h1 id="nombreProducto">
+        UrbanX Shadow Runner
+      </h1>
+
+
+      <p class="codigo" id="codigoProducto">
+        Código: UX-001
+      </p>
+
+
+      <div class="precio" id="precioProducto">
+        $50.00
+      </div>
+
+
+      <p class="descripcion">
+
+        Explora tu producto UrbanX desde todos los ángulos
+        y conoce cada uno de sus detalles.
+
+      </p>
+
+
+
+      <!-- INFORMACIÓN PRINCIPAL -->
+
+      <div class="datos-producto">
+
+
+        <div class="dato">
+
+          <span>
+            Marca
+          </span>
+
+          <strong>
+            UrbanX
+          </strong>
+
+        </div>
+
+
+
+        <div class="dato">
+
+          <span>
+            Modelo
+          </span>
+
+          <strong>
+            Shadow Runner
+          </strong>
+
+        </div>
+
+
+
+        <div class="dato">
+
+          <span>
+            Colección
+          </span>
+
+          <strong>
+            Urban Series
+          </strong>
+
+        </div>
+
+
+
+        <div class="dato">
+
+          <span>
+            Color
+          </span>
+
+          <strong>
+            Negro
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- DETALLES -->
+
+      <div class="detalles">
+
+
+        <details open>
+
+          <summary>
+            Detalles del producto
+          </summary>
+
+          <ul>
+
+            <li>
+              Diseño urbano premium
+            </li>
+
+            <li>
+              Material resistente
+            </li>
+
+            <li>
+              Acabados de alta calidad
+            </li>
+
+            <li>
+              Diseño exclusivo UrbanX
+            </li>
+
+          </ul>
+
+        </details>
+
+
+
+        <details>
+
+          <summary>
+            Subdetalles
+          </summary>
+
+
+          <div class="subdetalles">
+
+
+            <div>
+
+              <span>
+                Material exterior
+              </span>
+
+              <strong>
+                Textil / sintético
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                Suela
+              </span>
+
+              <strong>
+                Alta resistencia
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                Estilo
+              </span>
+
+              <strong>
+                Urbano
+              </strong>
+
+            </div>
+
+
+            <div>
+
+              <span>
+                Edición
+              </span>
+
+              <strong>
+                UrbanX 2026
+              </strong>
+
+            </div>
+
+
+          </div>
+
+        </details>
+
+
+
+        <details>
+
+          <summary>
+            Cuidado del producto
+          </summary>
+
+
+          <p>
+
+            Limpia el producto con un paño suave ligeramente húmedo.
+            Evita productos abrasivos y deja secar a temperatura ambiente.
+
+          </p>
+
+        </details>
+
+
+      </div>
+
+
+
+      <!-- PRODUCTO ORIGINAL -->
+
+      <div class="original">
+
+        <span class="punto"></span>
+
+        Producto UrbanX
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+  <script src="app.js"></script>
+
+
+</body>
+</html>

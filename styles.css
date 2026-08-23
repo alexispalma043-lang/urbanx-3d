@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --negro: #0b0b0b;
+  --blanco: #ffffff;
+  --gris: #707070;
+  --gris-claro: #e4e4e4;
+  --fondo-3d: #efeee9;
+  --verde-urbanx: #dfff38;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--blanco);
+  color: var(--negro);
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  height: 76px;
+  background: var(--negro);
+  color: var(--blanco);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 5%;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  letter-spacing: -1px;
+}
+
+.logo span {
+  color: var(--verde-urbanx);
+}
+
+.header-text {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: #bdbdbd;
+}
+
+
+/* =========================
+   CONTENEDOR PRINCIPAL
+========================= */
+
+.producto-container {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+
+  min-height: calc(100vh - 76px);
+}
+
+
+/* =========================
+   PRODUCTO 3D
+========================= */
+
+.producto-3d {
+  position: relative;
+
+  background:
+    radial-gradient(
+      circle at center,
+      #ffffff 0%,
+      #efeee9 50%,
+      #d7d5cf 100%
+    );
+
+  padding: 40px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Etiqueta vista 3D */
+
+.badge {
+  position: absolute;
+
+  top: 30px;
+  left: 40px;
+
+  z-index: 5;
+
+  background: var(--negro);
+  color: var(--blanco);
+
+  padding: 10px 14px;
+
+  font-size: 10px;
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* Visor 3D */
+
+model-viewer {
+  width: 100%;
+
+  min-height: 560px;
+
+  flex: 1;
+
+  --poster-color: transparent;
+
+  touch-action: pan-y;
+}
+
+
+/* =========================
+   CONTROLES 3D
+========================= */
+
+.controles {
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-top: 5px;
+
+  flex-wrap: wrap;
+}
+
+.controles button {
+  min-height: 44px;
+
+  padding: 0 18px;
+
+  border: 1px solid #b8b8b8;
+
+  border-radius: 50px;
+
+  background: rgba(255, 255, 255, 0.75);
+
+  color: var(--negro);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.controles button:hover {
+  background: var(--negro);
+  color: var(--blanco);
+  border-color: var(--negro);
+}
+
+
+/* Instrucción */
+
+.instruccion {
+  text-align: center;
+
+  margin-top: 15px;
+
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =========================
+   INFORMACIÓN DEL PRODUCTO
+========================= */
+
+.producto-info {
+  padding: 60px 8%;
+}
+
+
+/* Categoría */
+
+.categoria {
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.7px;
+
+  margin-bottom: 15px;
+}
+
+
+/* Nombre */
+
+.producto-info h1 {
+  font-size: clamp(40px, 4.4vw, 68px);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 10px;
+
+  max-width: 650px;
+}
+
+
+/* Código */
+
+.codigo {
+  font-size: 13px;
+
+  color: var(--gris);
+
+  margin-bottom: 28px;
+}
+
+
+/* Precio */
+
+.precio {
+  font-size: 32px;
+
+  font-weight: 900;
+
+  margin-bottom: 25px;
+}
+
+
+/* Descripción */
+
+.descripcion {
+  font-size: 15px;
+
+  line-height: 1.7;
+
+  color: #555;
+
+  margin-bottom: 30px;
+
+  max-width: 550px;
+}
+
+
+/* =========================
+   DATOS DEL PRODUCTO
+========================= */
+
+.datos-producto {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  gap: 1px;
+
+  background: var(--gris-claro);
+
+  border: 1px solid var(--gris-claro);
+
+  margin-bottom: 32px;
+}
+
+.dato {
+  background: var(--blanco);
+
+  padding: 18px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.dato span {
+  color: #777;
+
+  font-size: 10px;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+.dato strong {
+  font-size: 14px;
+}
+
+
+/* =========================
+   DETALLES
+========================= */
+
+.detalles {
+  border-top: 1px solid var(--gris-claro);
+}
+
+details {
+  padding: 20px 0;
+
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+summary {
+  cursor: pointer;
+
+  font-size: 14px;
+
+  font-weight: 900;
+}
+
+details ul {
+  margin-top: 17px;
+
+  padding-left: 20px;
+}
+
+details li {
+  margin-bottom: 8px;
+
+  color: #555;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+details p {
+  margin-top: 17px;
+
+  color: #555;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================
+   SUBDETALLES
+========================= */
+
+.subdetalles {
+  display: grid;
+
+  gap: 14px;
+
+  margin-top: 18px;
+}
+
+.subdetalles div {
+  display: flex;
+
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.subdetalles span {
+  color: #777;
+
+  font-size: 12px;
+}
+
+.subdetalles strong {
+  font-size: 12px;
+
+  text-align: right;
+}
+
+
+/* =========================
+   PRODUCTO ORIGINAL
+========================= */
+
+.original {
+  margin-top: 30px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 12px;
+
+  font-weight: 800;
+}
+
+.punto {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background: var(--verde-urbanx);
+
+  border: 1px solid var(--negro);
+}
+
+
+/* =========================
+   RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 900px) {
+
+  .producto-container {
+    grid-template-columns: 1fr;
+  }
+
+  .producto-3d {
+    min-height: 570px;
+  }
+
+  model-viewer {
+    min-height: 470px;
+  }
+
+  .producto-info {
+    padding: 45px 6%;
+  }
+
+}
+
+
+/* =========================
+   RESPONSIVE CELULAR
+========================= */
+
+@media (max-width: 520px) {
+
+  .header {
+    padding: 0 20px;
+  }
+
+  .header-text {
+    display: none;
+  }
+
+  .producto-3d {
+    padding: 25px 16px;
+
+    min-height: 510px;
+  }
+
+  .badge {
+    left: 16px;
+    top: 20px;
+  }
+
+  model-viewer {
+    min-height: 400px;
+  }
+
+  .producto-info {
+    padding: 40px 20px 60px;
+  }
+
+  .producto-info h1 {
+    font-size: 43px;
+  }
+
+  .datos-producto {
+    grid-template-columns: 1fr;
+  }
+
+}
