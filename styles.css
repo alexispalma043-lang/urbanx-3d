@@ -478,3 +478,51 @@ details p {
   }
 
 }
+/* =========================
+   DERECHOS DE AUTOR
+========================= */
+
+.footer-legal {
+  background: #0b0b0b;
+  color: #ffffff;
+
+  text-align: center;
+
+  padding: 35px 20px;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+.footer-brand {
+  font-size: 22px;
+  font-weight: 900;
+
+  margin-bottom: 15px;
+}
+
+.footer-brand span {
+  color: #dfff38;
+}
+
+.footer-legal p {
+  margin: 6px 0;
+
+  color: #aaaaaa;
+}
+
+.footer-legal .separador {
+  width: 50px;
+  height: 1px;
+
+  background: #444;
+
+  margin: 18px auto;
+}
+
+.footer-legal .lex {
+  color: #ffffff;
+
+  font-weight: 700;
+}
